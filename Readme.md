@@ -26,7 +26,7 @@ $ make install
 
   Ubuntu:
 
-```sh  
+```sh
 # install libcurl
 $ sudo apt-get install libcurl4-gnutls-dev -qq
 # clone
@@ -45,7 +45,7 @@ $ sudo make install
   stand-alone "micro" C libraries for developers to quickly install without coupling
   to large frameworks.
 
-  You should use `clib(1)` to fetch these files for you and check them into your repository, the end-user and contributors should not require having `clib(1)` installed. This allows clib(1) to fit into any new or existing C workflow without friction.
+  You should use `clib(1)` to fetch these files for you and check them into your repository, the end-user and contributors should not require having `clib(1)` installed. This allows `clib(1)` to fit into any new or existing C workflow without friction.
 
   The wiki [listing of packages](https://github.com/clibs/clib/wiki/Packages) acts as the "registry" and populates the `clib-search(1)` results.
 
@@ -57,16 +57,23 @@ $ sudo make install
   Options:
 
     -h, --help     Output this message
-    -v, --version  Output version information
+    -V, --version  Output version information
 
   Commands:
 
-    install [name...]  Install one or more packages
-    search [query]     Search for packages
-    help <cmd>         Display help for cmd
+    init                 Start a new project
+    i, install [name...] Install one or more packages
+    up, update [name...] Update one or more packages
+    upgrade [version]    Upgrade clib to a specified or latest version\
+    configure [name...]  Configure one or more packages
+    build [name...]      Build one or more packages
+    search [query]       Search for packages
+    help <cmd>           Display help for cmd
 ```
 
 ## Examples
+
+ More examples and best practices at [BEST_PRACTICE.md](https://github.com/clibs/clib/blob/master/BEST_PRACTICE.md).
 
  Install a few dependencies to `./deps`:
 
@@ -92,9 +99,9 @@ $ clib install ms file hash
 $ clib install visionmedia/mon visionmedia/every visionmedia/watch
 ```
 
-## package.json
+## clib.json
 
- Example of a package.json explicitly listing the source:
+ Example of a clib.json explicitly listing the source:
 
 ```json
 {
@@ -108,7 +115,7 @@ $ clib install visionmedia/mon visionmedia/every visionmedia/watch
 }
 ```
 
- Example of a package.json for an executable:
+ Example of a clib.json for an executable:
 
 ```json
 {
@@ -122,7 +129,7 @@ $ clib install visionmedia/mon visionmedia/every visionmedia/watch
 }
 ```
 
- See [explanation of package.json](https://github.com/clibs/clib/wiki/Explanation-of-package.json) for more details.
+ See [explanation of clib.json](https://github.com/clibs/clib/wiki/Explanation-of-package.json) for more details.
 
 ## Contributing
 
@@ -131,4 +138,4 @@ $ clib install visionmedia/mon visionmedia/every visionmedia/watch
 ## Articles
 
   - [Introducing Clib](https://medium.com/code-adventures/b32e6e769cb3) - introduction to clib
-  - [The Advent of Clib: the C Package Manager](http://blog.ashworth.in/2014/10/18/the-advent-of-clib-the-c-package-manager/) - overview article about clib
+  - [The Advent of Clib: the C Package Manager](http://blog.ashworth.in/2014/10/19/the-advent-of-clib-the-c-package-manager.html) - overview article about clib

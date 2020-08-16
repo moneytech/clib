@@ -3,4 +3,11 @@ clib
 clib-install
 clib-search
 *.o
+*.d
 tmp/
+/clib-init
+/clib-configure
+package-lock.json
+clib-build
+clib-update
+clib-upgrade
